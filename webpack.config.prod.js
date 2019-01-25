@@ -29,7 +29,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'target/generated-resources/public/static'),
         publicPath: '/static/',
-        filename: 'rulenode-core-config.js',
+        filename: 'empty-node-core-config.js',
     },
     externals: {
         "jquery": "jQuery"

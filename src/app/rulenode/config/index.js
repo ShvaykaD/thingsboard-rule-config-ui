@@ -14,26 +14,10 @@
  * limitations under the License.
  */
 
-import ruleNodeTypes from './rulenode-core-types.constant';
-
-import filterComponents from './components/filter';
-import enrichmentComponents from './components/enrichment';
-import transformComponents from './components/transform';
-import actionComponents from './components/action';
-
 import EmptyConfigDirective from './components/empty-config.directive';
+import EmptyNodeCoreConfig from './empty-node-core-config';
 
-import RelationsQueryConfigDirective from './components/relations-query-config.directive';
-import DeviceRelationsQueryConfigDirective from './components/device-relations-query-config.directive';
-import KvMapConfigDirective from './components/kv-map-config.directive';
-
-import RuleNodeCoreConfig from './rulenode-core-config';
-
-export default angular.module('thingsboard.ruleChain.config',
-    [ruleNodeTypes, filterComponents, enrichmentComponents, transformComponents, actionComponents])
+export default angular.module('thingsboard.ruleChain.config')
     .directive('tbNodeEmptyConfig', EmptyConfigDirective)
-    .directive('tbRelationsQueryConfig', RelationsQueryConfigDirective)
-    .directive('tbDeviceRelationsQueryConfig', DeviceRelationsQueryConfigDirective)
-    .directive('tbKvMapConfig', KvMapConfigDirective)
-    .config(RuleNodeCoreConfig)
+    .config(EmptyNodeCoreConfig)
     .name;
